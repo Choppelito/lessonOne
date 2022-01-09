@@ -1,20 +1,31 @@
 public class pinetree {
 
-    public void Run(){
+    public void bigTree(){
 
-        int numOfCones = 0;
-        int age = randomAge();
-        boolean fallen = false;
-
-        if (age>150){
-            fallen = true;
-        }
+        int numOfCones = howManyCones();
+        int age = age();
+        boolean fallen = fallen(age);
+        int height = height();
+        int branch = branches(height);
 
     }
+    private int howManyCones(){
+        return (int)(5*Math.random());
+    }
 
-    public int randomAge(){
-        int random;
-        random = (int)(200*Math.random()+1);
-        return random;
+    private int age(){
+        return (int)(200*Math.random()+1);
+    }
+
+    private boolean fallen(int age){
+        return age > 150;
+    }
+
+    private int height(){
+        return (int)(30*Math.random()+1);
+    }
+
+    private int branches(int height){
+        return height * 2;
     }
 }
