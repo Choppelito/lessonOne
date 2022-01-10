@@ -2,6 +2,8 @@ public class storyline {
 
     public void playStory(){
         mainStory();
+        System.out.println("Välj 1 för grenen med antalet kottar: " + pinetree.howManyCones());
+        System.out.println("Välj 2 för grenen med antalet kottar: " + pinetree.howManyCones());
         int choice = Integer.parseInt(System.console().readLine());
     }
 

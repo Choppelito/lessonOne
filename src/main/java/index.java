@@ -6,12 +6,14 @@ public class index {
         pinetree pinetree = new pinetree();
         pinetree.bigTree();
 
-        owl owl = new owl(1.5, 8, true);
+       owl owl = new owl(12, 23, true);
+
+
+
+
 
         storyline storyline = new storyline();
         storyline.playStory();
-
-
 
         ArrayList<Squirrel> squirrels = new ArrayList<>();
 
@@ -21,6 +23,15 @@ public class index {
         squirrels.add(new Squirrel(5, 6, 17));
         squirrels.add(new Squirrel(4, 10, 7));
 
-        //Squirrel.eat();//
-    }
+       Squirrel.eat(false);
+
+
+            storyline.playStory();
+
+
+            }
+       // owl.eat();//
+
+
+
 }

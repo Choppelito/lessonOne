@@ -1,3 +1,4 @@
+import javax.sound.midi.Soundbank;
 import java.util.ArrayList;
 
 public class Squirrel {
@@ -6,6 +7,8 @@ public class Squirrel {
     int age;
     int numOfConesInNest;
     String prey;
+    boolean hungry= false;
+
 
 
     public Squirrel(int weight, int age, int numOfConesInNest) {
@@ -13,6 +16,7 @@ public class Squirrel {
         this.age = age;
         this.numOfConesInNest = numOfConesInNest;
     }
+
 
 
     public int getAge() {
@@ -25,12 +29,8 @@ public class Squirrel {
         return numOfConesInNest;
     }
 
-    public static boolean eat(int numOfConesInNest){
-        if (numOfConesInNest >= 2){
+    public static boolean eat(boolean hungry) {
+
             return true;
         }
-        else {
-            return false;
-        }
-    }
 }
