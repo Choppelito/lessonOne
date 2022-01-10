@@ -1,8 +1,10 @@
 public class owl {
-    private double wingspan;
-    private int age;
-    private boolean hungry;
-    private String predator;
+    double wingspan;
+    int age;
+    boolean hungry;
+    String predator;
+
+
 
     public owl(double wingspan, int age, boolean hungry){
         this.wingspan = wingspan;
@@ -10,7 +12,18 @@ public class owl {
         this.hungry = hungry;
     }
 
-    public void eat(){
+    public double getWingspan() {
+
+        return wingspan;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+
+    public static boolean eat(boolean hungry){
+        return true;
 
     }
 }
