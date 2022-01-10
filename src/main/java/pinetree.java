@@ -4,11 +4,11 @@ public class pinetree {
 
         int numOfCones = howManyCones();
         int age = age();
-        boolean fallen = fallen(age);
+        int wind = wind();
         int height = height();
-        int branch = branches(height);
-
+        boolean fallen = fallen(age, wind, height);
     }
+
     public static int howManyCones(){
         return (int)(5*Math.random());
     }
@@ -17,8 +17,15 @@ public class pinetree {
         return (int)(200*Math.random()+1);
     }
 
-    private boolean fallen(int age){
-        return age > 150;
+    private boolean fallen(int age, int wind, int height){
+        boolean fallen = false;
+        if (age>150 && wind>8 && height>10){
+            fallen = true;
+        }
+        else if (wind>10 && height>20){
+            fallen = true;
+        }
+        return fallen;
     }
 
     private int height(){
@@ -28,4 +35,7 @@ public class pinetree {
     private int branches(int height){
         return height * 2;
     }
+
+    private int wind(){
+        return (int)(15*Math.random()+1);}
 }

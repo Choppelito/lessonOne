@@ -1,24 +1,20 @@
 public class owl {
-    double wingspan;
-    int age;
-    boolean hungry;
+    int wingspan = (int)(200*Math.random()+1);
+    int age = (int)(20*Math.random()+1);
+    boolean eat = eat(wingspan, age);
     String predator;
 
-    public owl(double wingspan, int age, boolean hungry){
+    public owl(int wingspan, int age, boolean eat){
         this.wingspan = wingspan;
         this.age = age;
-        this.hungry = hungry;
+        this.eat = eat;
     }
 
-    public String eat(String food){
-        String mat = food;
-
-        if (mat.equals(hungry)){
-
+    public boolean eat(int wingspan, int age){
+        boolean full = false;
+        if (wingspan>100 && age>10 || wingspan>150 && age<10){
+            full=true;
         }
-
-
-        return food;
-
+        return full;
     }
 }
