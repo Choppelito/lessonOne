@@ -14,18 +14,13 @@ public class Squirrel {
         this.numOfConesInNest = numOfConesInNest;
     }
 
-    public int getAge() {
-        return age;
-    }
-    public int getWeight() {
-        return weight;
-    }
-    public int getNumOfConesInNest() {
-        return numOfConesInNest;
+
+    public static boolean eat(int weight, int age, int numOfConesInNest) {
+        boolean full= false;
+        if (weight > 300 || age > 7 && numOfConesInNest > 1){
+            full= true;
+        }
+        return full;
     }
 
-    public static boolean eat(boolean hungry) {
-
-        return true;
-    }
 }
