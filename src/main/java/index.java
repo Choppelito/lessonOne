@@ -1,4 +1,4 @@
-import java.sql.SQLOutput;
+
 import java.util.ArrayList;
 
 public class index {
@@ -16,25 +16,30 @@ public class index {
 
         owl owl = new owl(120, 10, true);
 
-        storyline storyLine = new storyline();
-        storyLine.playStory();
-
+        boolean faller = pinetree.fallen((int)(200*Math.random()+1), (int)(15*Math.random()+1), (int)(30*Math.random()+1));
+        if (faller){
+            System.out.println("Tree fallen");
+        }else {
+            System.out.println("Tree still standing");
+        }
 
         boolean mat = Squirrel.eat((int)(400*Math.random()+1), (int)(7*Math.random()+1), (int)(10*Math.random()+1) );
-        if (mat == true){
+        if (mat){
             System.out.println("Squirrel is full");
         }else {
             System.out.println("Squirrel is hungry!");
         }
 
         boolean food = owl.eat((int)(200*Math.random()+1), (int)(20*Math.random()+1));
-        if (food == true){
+        if (food){
             System.out.println("Owl is full");
         }else {
             System.out.println("Owl eats squirrel");
-
-
-
         }
+
+
+
+        storyline storyLine = new storyline();
+        storyLine.playStory();
     }
 }

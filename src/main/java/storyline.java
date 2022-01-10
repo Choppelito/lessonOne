@@ -8,7 +8,8 @@ public class storyline {
             System.out.println("Välj 1 för grenen med antalet kottar: " + pinetree.howManyCones());
             System.out.println("Välj 2 för grenen med antalet kottar: " + pinetree.howManyCones());
             int choice = input.nextInt();
-            if (choice == 1) {
+            int owl = (int)(2*Math.random()+1);
+            if (choice == owl) {
                 System.out.println("Nu tog ugglan dig!");
                 System.out.println("Vill du spela en gång till?\n1. Ja\n2. Nej");
                 int quit = input.nextInt();
@@ -16,7 +17,7 @@ public class storyline {
                     break;
 
                 }
-            } else if (choice == 2) {
+            } else if (choice != owl) {
                 System.out.println("Du klarar dig en stund till!");
             }
         }
