@@ -10,7 +10,18 @@ public class owl {
         this.hungry = hungry;
     }
 
-    public void eat(){
+
+
+
+    public String eat(String food){
+        String mat = food;
+
+        if (mat.equals(hungry)){
+
+        }
+
+
+        return food;
 
     }
 }
