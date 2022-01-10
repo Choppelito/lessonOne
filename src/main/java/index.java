@@ -1,3 +1,4 @@
+import java.sql.SQLOutput;
 import java.util.ArrayList;
 
 public class index {
@@ -7,17 +8,33 @@ public class index {
         pinetree.bigTree();
 
         ArrayList<Squirrel> squirrels = new ArrayList<>();
-        squirrels.add(new Squirrel(5, 12, 24));
-        squirrels.add(new Squirrel(4, 7, 16));
-        squirrels.add(new Squirrel(6, 2, 12));
-        squirrels.add(new Squirrel(5, 6, 17));
-        squirrels.add(new Squirrel(4, 10, 7));
+        squirrels.add(new Squirrel(100, 12, 24));
+        squirrels.add(new Squirrel(140, 7, 16));
+        squirrels.add(new Squirrel(300, 2, 12));
+        squirrels.add(new Squirrel(450, 6, 17));
+        squirrels.add(new Squirrel(240, 10, 7));
 
-        owl owl = new owl(12, 10, true);
+        owl owl = new owl(120, 10, true);
 
-        storyline storyline = new storyline();
-        storyline.playStory();
+        storyline storyLine = new storyline();
+        storyLine.playStory();
 
-       //Squirrel.eat(false);
+
+        boolean mat = Squirrel.eat((int)(400*Math.random()+1), (int)(7*Math.random()+1), (int)(10*Math.random()+1) );
+        if (mat == true){
+            System.out.println("Squirrel is full");
+        }else {
+            System.out.println("Squirrel is hungry!");
+        }
+
+        boolean food = owl.eat((int)(200*Math.random()+1), (int)(20*Math.random()+1));
+        if (food == true){
+            System.out.println("Owl is full");
+        }else {
+            System.out.println("Owl eats squirrel");
+
+
+
+        }
     }
 }
