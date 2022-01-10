@@ -9,7 +9,7 @@ public class pinetree {
         int branch = branches(height);
 
     }
-    private int howManyCones(){
+    public static int howManyCones(){
         return (int)(5*Math.random());
     }
 
