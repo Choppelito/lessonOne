@@ -1,7 +1,7 @@
 public class owl {
-    int wingspan = (int)(200*Math.random()+1);
-    int age = (int)(20*Math.random()+1);
-    boolean eat = eat(wingspan, age);
+    int wingspan;
+    int age;
+    static boolean eat;
     String predator;
 
     public owl(int wingspan, int age, boolean eat){
@@ -10,9 +10,9 @@ public class owl {
         this.eat = eat;
     }
 
-    public boolean eat(int wingspan, int age){
+    public static boolean eat(int wingspan, int age){
         boolean full = false;
-        if (wingspan>100 && age>10 || wingspan>150 && age<10){
+        if (wingspan>50 && age>5 || wingspan<180 && age<19){
             full=true;
         }
         return full;
