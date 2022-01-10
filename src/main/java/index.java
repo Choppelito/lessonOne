@@ -7,6 +7,6 @@ public class index {
 
 
         storyline storyline = new storyline();
-        storyline.storyline();
+        storyline.playStory();
     }
 }
