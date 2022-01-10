@@ -10,7 +10,12 @@ public class storyline {
             int choice = input.nextInt();
             if (choice == 1) {
                 System.out.println("Nu tog ugglan dig!");
-                break;
+                System.out.println("Vill du spela en gång till?\n1. Ja\n2. Nej");
+                int quit = input.nextInt();
+                if (quit == 2){
+                    break;
+
+                }
             } else if (choice == 2) {
                 System.out.println("Du klarar dig en stund till!");
             }
